@@ -36,7 +36,7 @@ public class PlayerControl : MonoBehaviour
         _direction.x = Input.GetAxis("Horizontal");
         _direction.z = Input.GetAxis("Vertical");
 
-        Vector3 _movement = _direction * _movementSpeed * Time.deltaTime;
+        Vector3 _movement = transform.rotation * _direction * _movementSpeed * Time.deltaTime;
 
         Move(_movement);
     }
@@ -50,6 +50,6 @@ public class PlayerControl : MonoBehaviour
     {
         _rotation.y = Input.GetAxis("Mouse X");
 
-        transform.Rotate(_rotation * _rotateSpeed * Time.deltaTime);
+        _controller.transform.Rotate(_rotation * _rotateSpeed * Time.deltaTime);
     }
 }

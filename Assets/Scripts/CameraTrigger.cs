@@ -33,6 +33,7 @@ public class CameraTrigger : MonoBehaviour
                 else _vcams[i].Priority = 10;                                           //Otherwise restores
             }
 
+            //Optional
             _vcams[0].Priority = 15;                                                    //Sets first camera as default
         }
     }
